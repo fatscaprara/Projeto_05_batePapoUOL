@@ -1,54 +1,116 @@
-.container-topo{
+.container-topo {
     border-bottom: 4px solid gray;
     width: 100%;
     position: fixed;
     left: 0;
     top: 0;
+    background-color: #ffffff;
 }
 
-.topo, .rodape{
+.topo,
+.rodape {
     width: 90%;
     height: 80px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
 }
 
-.topo img{
+.topo img {
     width: 75px;
     height: 53px;
 }
 
-.topo ion-icon{
+.topo ion-icon {
     width: 45px;
     height: 45px;
 }
 
-.main{
-    margin-top: 80px;
+.main {
+    margin-top: 90px;
+    margin-bottom: 90px;
     background-color: #f3f3f3;
-    height: 400px;
     width: 100%;
+    height: 80vh;
 }
 
-.container-rodape{
+.chat li {
+    display: flex;
+    height: 40px;
+    margin: 4px 0 4px 0;
+    padding: 0 8px;
+    align-items: center;
+}
+
+.time {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #AAAAAA;
+}
+
+.from-to {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    margin: 0 6px;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+}
+
+.status {
+    background-color: #dcdcdc;
+}
+
+.message {
+    background-color: #ffffff;
+}
+
+.private_message {
+    background-color: #FFDEDE;
+}
+
+p {
+    font-family: Roboto;
+}
+
+.container-rodape {
     border-top: 4px solid gray;
     width: 100%;
     position: fixed;
     left: 0;
     bottom: 0;
+    background-color: #ffffff;
 }
 
-.rodape p{
+input {
     font-family: Roboto, 'sans-serif';
     font-weight: 400;
     font-style: italic;
     font-size: 18px;
+    border: #ffffff;
 }
 
-.rodape img{
+input[type=text]:focus {
+    outline: none;
+}
+
+button{
+    border: none;
+}
+
+button :hover{
+    cursor: pointer;
+}
+
+.rodape img {
     width: 26px;
     height: 26px;
 }
