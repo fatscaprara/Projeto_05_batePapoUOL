@@ -23,12 +23,12 @@ function verificarDisponibilidadeNome(nome) {
 
 function tratarErroDisponibilidade() {
     console.log('deu ruim');
-    disponivel = 'false';
+    disponivel = false;
 }
 
 function tratarSucessoDisponibilidade() {
     console.log('deu certo');
-    disponivel = 'true';
+    disponivel = true;
 }
 
 function manterConexao() {
@@ -82,6 +82,37 @@ function exibirMensagem(mensagem) {
     chat.scrollIntoView(false);
 }
 
+function enviarMensagem() {
+    const url = 'https://mock-api.driven.com.br/api/v6/uol/messages';
+    const mensagem = {
+        from: nome.name,
+        to: "Todos",
+        text: document.querySelector("input").value,
+        type: "message"
+    }
+    const promise = axios.post(url, mensagem);
+    promise.catch(tratarErroMensagem);
+    promise.then(tratarSucessoMensagem);
+}
+
+//enviando mensagens com a tecla enter
+document.addEventListener("keypress", function (e) {
+    if (e.key === 'Enter') {
+        const btn = document.querySelector(".send-message");
+        btn.click();
+    }
+});
+
+function tratarErroMensagem() {
+    alert("Você foi desconectado, a seguir a página será atualizada para a sua reconexão.")
+    window.location.reload();
+}
+
+function tratarSucessoMensagem() {
+    document.querySelector("input").value = '';
+    buscarMensagens();
+}
+
 entrarSala();
-setInterval(manterConexao, 10000);//4
-setInterval(buscarMensagens, 10000);//3
+setInterval(manterConexao, 4000);//4
+setInterval(buscarMensagens, 3000);//3
