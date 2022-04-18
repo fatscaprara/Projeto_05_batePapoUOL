@@ -1,0 +1,54 @@
+.container-topo{
+    border-bottom: 4px solid gray;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.topo, .rodape{
+    width: 90%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.topo img{
+    width: 75px;
+    height: 53px;
+}
+
+.topo ion-icon{
+    width: 45px;
+    height: 45px;
+}
+
+.main{
+    margin-top: 80px;
+    background-color: #f3f3f3;
+    height: 400px;
+    width: 100%;
+}
+
+.container-rodape{
+    border-top: 4px solid gray;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.rodape p{
+    font-family: Roboto, 'sans-serif';
+    font-weight: 400;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.rodape img{
+    width: 26px;
+    height: 26px;
+}
