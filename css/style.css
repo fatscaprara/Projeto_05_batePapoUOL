@@ -102,15 +102,69 @@ input[type=text]:focus {
     outline: none;
 }
 
-button{
+button {
     border: none;
 }
 
-button :hover{
+button :hover {
     cursor: pointer;
 }
 
 .rodape img {
     width: 26px;
     height: 26px;
+}
+
+.tela-de-entrada {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-entrada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-entrada img {
+    width: 130px;
+    height: 92px;
+    margin-bottom: 90px;
+}
+
+.container-entrada input {
+    text-align: center;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #aeaeae;
+    width: 260px;
+    height: 54px;
+    border-radius: 4px;
+    border: 1px #d7d7d7 solid;
+}
+
+.container-entrada button {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    width: 110px;
+    height: 45px;
+    border-radius: 9px;
+    background-color: #e7e7e7;
+    margin-top: 15px;
+}
+
+.escondido{
+    display: none;
 }

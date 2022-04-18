@@ -2,13 +2,15 @@ let nome;
 
 function entrarSala() {
     nome = {
-        name: prompt("Qual é o seu nome?")
+        name: document.querySelector(".input-name").value
     }
     console.log(nome);
     while (verificarDisponibilidadeNome(nome) === false) {
-        nome.name = prompt("Nome indisponível! Digite outro nome.")
+        alert("Nome indisponível! Digite outro nome.")
+        nome.name = document.querySelector(".input-name")
         verificarDisponibilidadeNome(nome);
     }
+    document.querySelector(".tela-de-entrada").classList.add("escondido");
 }
 
 function verificarDisponibilidadeNome(nome) {
@@ -113,6 +115,5 @@ function tratarSucessoMensagem() {
     buscarMensagens();
 }
 
-entrarSala();
 setInterval(manterConexao, 4000);//4
 setInterval(buscarMensagens, 3000);//3
